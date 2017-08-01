@@ -1,0 +1,13 @@
+.top-bar, .top-bar ul {
+   background-color: $nav-background;
+}
+.top-bar {
+   .menu-text {
+      color: $menu-text-color;
+   }
+}
+.top-bar {
+   .menu span {
+      color: $menu-text-color;
+   }
+}
