@@ -3,11 +3,15 @@
 }
 .top-bar {
    .menu-text {
-      color: $menu-text-color;
+      color: $nav-text-color;
+   }
+   .menu > .menu-text > a {
+      display: inline;
+      padding: 0;
    }
 }
 .top-bar {
    .menu span {
-      color: $menu-text-color;
+      color: $nav-text-color;
    }
 }
