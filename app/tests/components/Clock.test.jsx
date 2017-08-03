@@ -7,6 +7,7 @@ var TestUtils = require('react-addons-test-utils');
 var Clock = require('Clock');
 
 describe('Clock', () => {
+   
    it('should exist', () => {
       expect(Clock).toExist();
    });
@@ -21,24 +22,35 @@ describe('Clock', () => {
       });
    });
 
-   describe('formatSeconds', () => {
-      it('should format seconds', () => {
+   describe('formatTime', () => {
+      it('should format seconds and minutes', () => {
          var clock = TestUtils.renderIntoDocument(<Clock />);
          var seconds = 615;
          var expected = '10:15';
-         var actual = clock.formatSeconds(seconds);
+         var actual = clock.formatTime(seconds);
 
          expect(actual).toBe(expected);
       });
 
-
-      it('should format seconds when min/sec are less than 10', () => {
+      it('should format seconds/minutes when min/sec are less than 10', () => {
          var clock = TestUtils.renderIntoDocument(<Clock />);
          var seconds = 61;
          var expected = '01:01';
-         var actual = clock.formatSeconds(seconds);
+         var actual = clock.formatTime(seconds);
 
          expect(actual).toBe(expected);
       });
+
+      // dummy test: for practise purpose.
+      it('should add 10 extra seconds to totalseconds', () => {
+         // get the Clock instance
+         var clock = TestUtils.renderIntoDocument(<Clock />);
+         var seconds = 100;
+         var expected = 110;
+         var actual = clock.addExtraTime(seconds);
+
+         expect(actual).toBe(expected);
+      });
+
    });
 });
