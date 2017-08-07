@@ -28,8 +28,8 @@ var Nav = () => {
             <div className="top-bar-right">
                <ul className="menu">
                   <li className="menu-text">
-                  Created by <a href="https://github.com/fvdz/ReactTimerApp"
-                     target="_blank">Frans van der Zijde</a>
+                  <a href="https://github.com/fvdz/ReactTimerApp"
+                  target="_blank">Frans</a>
                   </li>
                </ul>
             </div>
